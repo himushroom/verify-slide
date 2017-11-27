@@ -1,6 +1,5 @@
 var box = $('.box'),
   imgBox = $('.imgBox'),
-  img = $('.img'),
   handle = $('.handle'),
   swiper = $('.swiper'),
   text = $('.text'),
@@ -17,8 +16,8 @@ var index = Math.round(Math.random() * 4);
 
 $(function() {
   // 随机添加背景图
+  $(imgBox).prepend(`<img src="imgs/${imgs[index]}.jpg" />`);
   verify.css('background-image', `url('imgs/${imgs[index]}.jpg')`);
-  img.attr('src', `imgs/${imgs[index]}.jpg`);
 
   window.onload = init();
 });
