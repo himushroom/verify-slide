@@ -1,5 +1,6 @@
 var box = $('.box'),
   imgBox = $('.imgBox'),
+  img = $('.img'),
   handle = $('.handle'),
   swiper = $('.swiper'),
   text = $('.text'),
@@ -14,17 +15,18 @@ for (let i = 1; i < 6; i++) {
 // 随机生成下标
 var index = Math.round(Math.random() * 4);
 
-window.onload = init();
-
-function init() {
-  var img = $('.img');
-  // 随机生成坐标
-  var verX = img.width() / 2 * (1 + Math.random()) - 30,
-    verY = img.height() / 4 + Math.random() * (img.height() / 2);
-
+$(function() {
   // 随机添加背景图
   verify.css('background-image', `url('imgs/${imgs[index]}.jpg')`);
   img.attr('src', `imgs/${imgs[index]}.jpg`);
+
+  window.onload = init();
+});
+
+function init() {
+  // 随机生成坐标（图片框固定为300px）
+  var verX = 150 * (1 + Math.random()) - 30,
+    verY = 75 + Math.random() * 150;
 
   fnDown(verX, verY);
 }

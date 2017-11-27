@@ -56,7 +56,8 @@
   left: 10px;
   width: 38px;
   height: 38px;
-  background: transparent url('../imgs/22.jpg') no-repeat scroll;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-size: 300px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4), 0 0 10px 0 rgba(90, 90, 90, 0.4);
   z-index: 10;
